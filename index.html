@@ -1,81 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JANTA HELP DESK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JANTA HELP DESK | सरकारी नौकरी, रिजल्ट और फॉर्म</title>
+<meta name="description" content="JANTA HELP DESK - सरकारी नौकरी, ऑनलाइन फॉर्म, रिजल्ट, एडमिट कार्ड, स्कॉलरशिप और सरकारी योजनाओं की जानकारी।">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:#f4f6f9;color:#222}
-header{background:linear-gradient(135deg,#063970,#0876c9);color:#fff;padding:18px 5%;text-align:center}
-header h1{margin:0;font-size:30px}header p{margin:7px 0 0}
-nav{background:#032b50;display:flex;flex-wrap:wrap;justify-content:center}
-nav a{color:#fff;text-decoration:none;padding:12px 15px;font-weight:bold}
-nav a:hover{background:#0876c9}
-.notice{background:#fff3cd;padding:12px;text-align:center;font-weight:bold}
-.container{width:92%;max-width:1200px;margin:20px auto}
-.search{display:flex;gap:8px;margin-bottom:20px}.search input{flex:1;padding:13px;border:1px solid #ccc;border-radius:6px;font-size:16px}.search button{padding:13px 20px;border:0;border-radius:6px;background:#0876c9;color:#fff;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.card{background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow:0 2px 8px #0001;border-top:4px solid #0876c9}
-.card h3{margin:8px 0}.card a{display:inline-block;margin-top:8px;color:#0876c9;text-decoration:none;font-weight:bold}
-.section{background:#fff;margin-top:22px;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px #0001}
-.section h2{margin:0;background:#063970;color:#fff;padding:13px 18px;font-size:20px}
-.list{padding:5px 18px}.item{display:flex;justify-content:space-between;gap:15px;padding:13px 5px;border-bottom:1px solid #eee}.item:last-child{border:0}.item a{color:#075fa8;font-weight:bold;text-decoration:none}.new{background:#e63946;color:#fff;padding:3px 7px;border-radius:12px;font-size:11px}
-footer{margin-top:30px;background:#032b50;color:#fff;text-align:center;padding:25px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}header h1{font-size:24px}.item{display:block}.item span{display:block;margin-top:6px}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}nav a{width:50%;text-align:center;padding:10px 5px}.search{flex-direction:column}.search button{width:100%}}
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#17202a;font-family:Arial,"Noto Sans Devanagari",sans-serif}
+.top{background:#063b70;color:#fff;text-align:center;padding:8px;font-size:13px}
+header{background:linear-gradient(135deg,#07549b,#08a0d9);color:#fff;padding:20px 4%;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:54px;height:54px;border-radius:12px;background:#fff;color:#07549b;display:grid;place-items:center;font-weight:900;font-size:20px}
+h1{margin:0;font-size:28px}header p{margin:5px 0 0;font-size:14px}
+.menu{background:#042e55;display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+.menu a{color:#fff;text-decoration:none;padding:12px 14px;font-weight:700;font-size:14px}.menu a:hover{background:#086aa9}
+.notice{background:#fff1b8;padding:10px;text-align:center;font-weight:700;color:#6a4b00}
+.wrap{max-width:1200px;width:94%;margin:18px auto}
+.search{display:flex;gap:8px}.search input{flex:1;padding:14px;border:1px solid #ccd5df;border-radius:7px;font-size:16px}.search button{border:0;background:#0878bd;color:#fff;border-radius:7px;padding:0 22px;font-weight:700}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.quick a{background:#fff;border-radius:10px;padding:18px;text-align:center;text-decoration:none;color:#063b70;box-shadow:0 2px 10px #0001;border-top:4px solid #0794d2}.quick b{display:block;font-size:17px;margin:7px}
+.columns{display:grid;grid-template-columns:2fr 1fr;gap:18px}.box{background:#fff;border-radius:10px;box-shadow:0 2px 10px #0001;margin-bottom:18px;overflow:hidden}.title{background:#063b70;color:#fff;padding:13px 16px;font-size:19px;font-weight:800}.row{padding:13px 16px;border-bottom:1px solid #e8edf2;display:flex;justify-content:space-between;gap:12px}.row:last-child{border:0}.row a{color:#075d98;text-decoration:none;font-weight:700}.tag{font-size:11px;background:#e63946;color:#fff;border-radius:12px;padding:4px 8px;white-space:nowrap}.side a{display:block;padding:13px 16px;color:#075d98;text-decoration:none;border-bottom:1px solid #eee;font-weight:700}
+footer{background:#042e55;color:#fff;text-align:center;padding:25px;margin-top:30px}footer p{margin:6px}
+@media(max-width:800px){header{padding:15px 3%}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}h1{font-size:23px}}
+@media(max-width:500px){.menu a{width:33.33%;text-align:center;padding:10px 4px;font-size:12px}.quick{grid-template-columns:repeat(2,1fr);gap:9px}.quick a{padding:13px 5px}.search{flex-direction:column}.search button{height:45px}.row{display:block}.row span{display:inline-block;margin-top:7px}}
 </style>
 </head>
 <body>
-<header><h1>JANTA HELP DESK</h1><p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • ऑनलाइन फॉर्म</p></header>
-<nav>
+<div class="top">📢 JANTA HELP DESK — सरकारी जानकारी एक जगह</div>
+<header>
+<div class="brand"><div class="logo">JH</div><div><h1>JANTA HELP DESK</h1><p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • ऑनलाइन फॉर्म</p></div></div>
+</header>
+<nav class="menu">
 <a href="#home">होम</a><a href="#jobs">Latest Jobs</a><a href="#forms">Online Form</a><a href="#results">Results</a>
-<a href="#admit">Admit Card</a><a href="#answer">Answer Key</a><a href="#scholarship">Scholarship</a><a href="#schemes">सरकारी योजनाएँ</a>
-<a href="#syllabus">Syllabus</a><a href="#papers">Previous Papers</a><a href="#private">Private Jobs</a><a href="#documents">Documents</a>
-<a href="#contact">Contact</a>
+<a href="#admit">Admit Card</a><a href="#answer">Answer Key</a><a href="#scholarship">Scholarship</a><a href="#schemes">योजनाएँ</a>
+<a href="#syllabus">Syllabus</a><a href="#papers">Papers</a><a href="#private">Private Jobs</a><a href="#contact">Contact</a>
 </nav>
-<div class="notice">⚠️ महत्वपूर्ण सूचना: किसी भी आवेदन से पहले संबंधित विभाग की आधिकारिक वेबसाइट और नोटिफिकेशन जरूर जाँचें।</div>
-<main class="container" id="home">
-<div class="search"><input id="search" placeholder="यहाँ नौकरी, रिजल्ट या फॉर्म खोजें..."><button onclick="findItems()">Search</button></div>
-<div class="grid">
-<div class="card"><div>🔥</div><h3>Latest Jobs</h3><p>नई सरकारी भर्तियाँ</p><a href="#jobs">देखें →</a></div>
-<div class="card"><div>📝</div><h3>Online Form</h3><p>ऑनलाइन आवेदन</p><a href="#forms">देखें →</a></div>
-<div class="card"><div>📊</div><h3>Results</h3><p>नवीनतम परिणाम</p><a href="#results">देखें →</a></div>
-<div class="card"><div>🎫</div><h3>Admit Card</h3><p>प्रवेश पत्र</p><a href="#admit">देखें →</a></div>
+<div class="notice">⚠️ आवेदन करने से पहले संबंधित विभाग की आधिकारिक वेबसाइट और नोटिफिकेशन जरूर जाँचें।</div>
+<main class="wrap" id="home">
+<div class="search"><input id="q" placeholder="Job, Result, Admit Card, Scholarship खोजें..."><button onclick="searchSite()">🔍 Search</button></div>
+
+<div class="quick">
+<a href="#jobs">🔥<b>Latest Jobs</b><small>नई सरकारी भर्तियाँ</small></a>
+<a href="#forms">📝<b>Online Form</b><small>ऑनलाइन आवेदन</small></a>
+<a href="#results">📊<b>Results</b><small>नवीनतम परिणाम</small></a>
+<a href="#admit">🎫<b>Admit Card</b><small>प्रवेश पत्र</small></a>
 </div>
 
-<section class="section" id="jobs"><h2>🔥 Latest Jobs</h2><div class="list">
-<div class="item"><a href="#">सरकारी भर्ती की जानकारी यहाँ जोड़ें</a><span class="new">NEW</span></div>
-<div class="item"><a href="#">नई भर्ती का नाम और आवेदन विवरण</a><span>Details →</span></div>
-</div></section>
+<div class="columns">
+<div>
+<section class="box" id="jobs"><div class="title">🔥 Latest Jobs</div>
+<div class="row"><a href="#">सरकारी भर्ती की जानकारी यहाँ जोड़ें</a><span class="tag">NEW</span></div>
+<div class="row"><a href="#">नई भर्ती का नाम और आवेदन विवरण</a><span>Details →</span></div></section>
 
-<section class="section" id="forms"><h2>📝 Online Form</h2><div class="list">
-<div class="item"><a href="#">ऑनलाइन आवेदन लिंक यहाँ जोड़ें</a><span>Apply →</span></div>
-<div class="item"><a href="#">महत्वपूर्ण आवेदन फॉर्म</a><span>Apply →</span></div>
-</div></section>
+<section class="box" id="forms"><div class="title">📝 Online Form</div>
+<div class="row"><a href="#">ऑनलाइन आवेदन लिंक यहाँ जोड़ें</a><span>Apply →</span></div>
+<div class="row"><a href="#">महत्वपूर्ण आवेदन फॉर्म</a><span>Apply →</span></div></section>
 
-<section class="section" id="results"><h2>📊 Results</h2><div class="list">
-<div class="item"><a href="#">नया रिजल्ट यहाँ जोड़ें</a><span>Result →</span></div>
-</div></section>
+<section class="box" id="results"><div class="title">📊 Results</div>
+<div class="row"><a href="#">नया रिजल्ट यहाँ जोड़ें</a><span>Result →</span></div></section>
 
-<section class="section" id="admit"><h2>🎫 Admit Card</h2><div class="list"><div class="item"><a href="#">Admit Card लिंक यहाँ जोड़ें</a><span>Download →</span></div></div></section>
-<section class="section" id="answer"><h2>🔑 Answer Key</h2><div class="list"><div class="item"><a href="#">Answer Key यहाँ जोड़ें</a><span>View →</span></div></div></section>
-<section class="section" id="scholarship"><h2>🎓 Scholarship</h2><div class="list"><div class="item"><a href="#">Scholarship जानकारी यहाँ जोड़ें</a><span>Details →</span></div></div></section>
-<section class="section" id="schemes"><h2>🏛️ सरकारी योजनाएँ</h2><div class="list"><div class="item"><a href="#">सरकारी योजना की जानकारी यहाँ जोड़ें</a><span>Details →</span></div></div></section>
-<section class="section" id="syllabus"><h2>📚 Syllabus</h2><div class="list"><div class="item"><a href="#">Syllabus और परीक्षा पैटर्न</a><span>View →</span></div></div></section>
-<section class="section" id="papers"><h2>📖 Previous Papers</h2><div class="list"><div class="item"><a href="#">Previous Year Paper यहाँ जोड़ें</a><span>View →</span></div></div></section>
-<section class="section" id="private"><h2>💼 Private Jobs</h2><div class="list"><div class="item"><a href="#">Private Job जानकारी यहाँ जोड़ें</a><span>Details →</span></div></div></section>
-<section class="section" id="documents"><h2>🪪 Important Documents</h2><div class="list"><div class="item"><a href="#">आधार, प्रमाण पत्र और अन्य दस्तावेजों की जानकारी</a><span>View →</span></div></div></section>
-<section class="section" id="contact"><h2>📞 Contact Us</h2><div class="list"><div class="item"><span>ईमेल/मोबाइल नंबर यहाँ जोड़ें</span></div></div></section>
+<section class="box" id="admit"><div class="title">🎫 Admit Card</div>
+<div class="row"><a href="#">Admit Card लिंक यहाँ जोड़ें</a><span>Download →</span></div></section>
+
+<section class="box" id="answer"><div class="title">🔑 Answer Key</div>
+<div class="row"><a href="#">Answer Key यहाँ जोड़ें</a><span>View →</span></div></section>
+
+<section class="box" id="scholarship"><div class="title">🎓 Scholarship</div>
+<div class="row"><a href="#">Scholarship जानकारी यहाँ जोड़ें</a><span>Details →</span></div></section>
+
+<section class="box" id="schemes"><div class="title">🏛️ सरकारी योजनाएँ</div>
+<div class="row"><a href="#">सरकारी योजना की जानकारी यहाँ जोड़ें</a><span>Details →</span></div></section>
+
+<section class="box" id="syllabus"><div class="title">📚 Syllabus</div>
+<div class="row"><a href="#">Syllabus और परीक्षा पैटर्न</a><span>View →</span></div></section>
+
+<section class="box" id="papers"><div class="title">📖 Previous Papers</div>
+<div class="row"><a href="#">Previous Year Paper यहाँ जोड़ें</a><span>View →</span></div></section>
+
+<section class="box" id="private"><div class="title">💼 Private Jobs</div>
+<div class="row"><a href="#">Private Job जानकारी यहाँ जोड़ें</a><span>Details →</span></div></section>
+</div>
+
+<aside>
+<section class="box side"><div class="title">⭐ Important Links</div>
+<a href="#jobs">Latest Jobs</a><a href="#forms">Online Forms</a><a href="#results">Latest Results</a><a href="#admit">Admit Cards</a><a href="#scholarship">Scholarship</a><a href="#schemes">सरकारी योजनाएँ</a></section>
+<section class="box side" id="contact"><div class="title">📞 Contact</div>
+<a href="#">WhatsApp: नंबर यहाँ जोड़ें</a><a href="#">Email: यहाँ जोड़ें</a></section>
+</aside>
+</div>
 </main>
-<footer>© 2026 JANTA HELP DESK | सूचना के लिए संबंधित विभाग की आधिकारिक वेबसाइट अवश्य देखें।</footer>
+<footer><strong>JANTA HELP DESK</strong><p>सरकारी नौकरी • रिजल्ट • ऑनलाइन फॉर्म • शिक्षा</p><p>© 2026 JANTA HELP DESK</p></footer>
 <script>
-function findItems(){
- const q=document.getElementById('search').value.toLowerCase().trim();
- if(!q)return alert('कृपया कुछ खोजें।');
- const els=[...document.querySelectorAll('.section')];
- const hit=els.find(x=>x.innerText.toLowerCase().includes(q));
- if(hit) hit.scrollIntoView({behavior:'smooth'});
- else alert('जानकारी नहीं मिली।');
+function searchSite(){
+ let q=document.getElementById('q').value.trim().toLowerCase();
+ if(!q){alert('कृपया कुछ खोजें।');return}
+ let all=[...document.querySelectorAll('.box')];
+ let hit=all.find(x=>x.innerText.toLowerCase().includes(q));
+ if(hit) hit.scrollIntoView({behavior:'smooth',block:'start'});
+ else alert('यह जानकारी अभी वेबसाइट में नहीं मिली।');
 }
 </script>
 </body>
